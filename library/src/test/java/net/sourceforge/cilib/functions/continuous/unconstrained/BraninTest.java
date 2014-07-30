@@ -33,6 +33,8 @@ public class BraninTest {
         x.setReal(0, -Math.PI);
         x.setReal(1, 12.275);
         assertEquals(0.397887, function.f(x), 0.0000009);
+   
+       
     }
 
     /**

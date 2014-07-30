@@ -13,10 +13,33 @@ import net.sourceforge.cilib.algorithm.population.IterationStrategy;
 import net.sourceforge.cilib.algorithm.population.SinglePopulationBasedAlgorithm;
 import net.sourceforge.cilib.entity.Topologies;
 import net.sourceforge.cilib.entity.comparator.SocialBestFitnessComparator;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Ackley;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Branin;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Bukin6;
+import net.sourceforge.cilib.functions.continuous.unconstrained.EggHolder;
+import net.sourceforge.cilib.functions.continuous.unconstrained.EqualMaxima;
+import net.sourceforge.cilib.functions.continuous.unconstrained.EvenDecreasingMaxima;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Griewank;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Michalewicz;
+import net.sourceforge.cilib.functions.continuous.unconstrained.ModifiedHimmelblau;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Pathological;
+import net.sourceforge.cilib.functions.continuous.unconstrained.PenHolder;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Rana;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Rastrigin;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Rosenbrock;
+import net.sourceforge.cilib.functions.continuous.unconstrained.SchwefelProblem2_26;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Shubert;
+import net.sourceforge.cilib.functions.continuous.unconstrained.SixHumpCamelBack;
+import net.sourceforge.cilib.functions.continuous.unconstrained.UnevenDecreasingMaxima;
+import net.sourceforge.cilib.functions.continuous.unconstrained.UnevenEqualMaxima;
+import net.sourceforge.cilib.functions.continuous.unconstrained.UrsemF1;
+import net.sourceforge.cilib.functions.continuous.unconstrained.UrsemF3;
+import net.sourceforge.cilib.functions.continuous.unconstrained.Vincent;
 import net.sourceforge.cilib.problem.solution.OptimisationSolution;
 import net.sourceforge.cilib.pso.iterationstrategies.SynchronousIterationStrategy;
 import net.sourceforge.cilib.pso.particle.Particle;
 import net.sourceforge.cilib.pso.particle.StandardParticle;
+import net.sourceforge.cilib.type.types.container.Vector;
 
 /**
  * <p>
@@ -90,6 +113,11 @@ public class PSO extends SinglePopulationBasedAlgorithm<Particle> {
         for (Particle p : topology) {
             p.updateFitness(p.getBehaviour().getFitnessCalculator().getFitness(p));
         }
+        
+       //Pathological func= new Pathological();
+       //Vector x = Vector.of(0.0879,10.0,0.356);
+       //System.out.println(func.f(x));
+       //System.out.println(func.getGradientVector(x));
     }
 
     /**

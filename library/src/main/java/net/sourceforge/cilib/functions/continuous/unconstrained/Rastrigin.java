@@ -57,7 +57,6 @@ public class Rastrigin extends ContinuousFunction implements Gradient, NichingFu
        
         return res;
     }
-
     /**
      * {@inheritDoc}
      */

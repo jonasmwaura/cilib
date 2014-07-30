@@ -70,9 +70,11 @@ public class Branin extends ContinuousFunction implements Gradient {
         Preconditions.checkArgument(input.size() == 2, "Branin function is only defined for 2 dimensions");
 
         double x1 = input.doubleValueOf(0);
-        double x2 = input.doubleValueOf(1);
-
+        double x2 = input.doubleValueOf(1);   
+       
+        
         return a * Math.pow((x2 - b * x1 * x1 + c * x1 - d), 2) + e * (1 - f) * Math.cos(x1) + e;
+        
     }
     
     public Double df(Vector input, int i) {

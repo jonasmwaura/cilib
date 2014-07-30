@@ -53,10 +53,10 @@ public class Griewank extends ContinuousFunction implements Gradient{
 	double value2=(Math.sin(input.doubleValueOf(i-1)/Math.sqrt(i))*(1.0/Math.sqrt(i)));
                        
 	double value3=1;
-	for (int j=1;j<input.size();j++) {
-           value3*=(Math.cos(input.doubleValueOf(j-1)/Math.sqrt(j))*(1.0/Math.sqrt(j)));
+	for (int j=0;j<input.size();j++){
+           value3*=(Math.cos(input.doubleValueOf(j)/Math.sqrt(j+1)));
         }
-	double currentInputcos=(Math.cos(input.doubleValueOf(i-1)/Math.sqrt(i))*(1.0/Math.sqrt(i)));
+	double currentInputcos=(Math.cos(input.doubleValueOf(i-1)/Math.sqrt(i)));
         value3=(value3/currentInputcos);
    
         result=value1+(value2*value3);
